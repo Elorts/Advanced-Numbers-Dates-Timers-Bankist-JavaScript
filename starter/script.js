@@ -266,3 +266,16 @@ console.log(Number.isNaN(+'20'));
 console.log(Number.isFinite(20)); // THE BEST WAY TO CHECK FOR NOT A NUMBER!!!
 
 console.log(Number.isInteger(25));
+
+console.log('********************>180<***************************');
+
+console.log(Math.sqrt(25));
+console.log(25 ** (1 / 2));
+console.log(8 ** (1 / 3)); // CUBIC ROOT
+
+console.log(Math.max(5, 18, 33233, 11, 2));
+console.log(Math.max(5, 18, '33233', 11, 2)); // even strings...
+
+console.log(Math.min(5, 18, 33233, 11, 2));
+
+console.log(Math.PI * NumberparseFloat('10px') ** 2);
