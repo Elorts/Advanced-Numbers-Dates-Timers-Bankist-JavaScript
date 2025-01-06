@@ -259,3 +259,10 @@ console.log(0.1 + 0.2);
 console.log(+'23'); // MAKES NUMBER FROM STRING!!!
 
 console.log(Number.parseInt('30px', 10)); // makes number
+console.log(Number.parseFloat('2.5rem'));
+
+console.log(Number.isNaN(+'20'));
+
+console.log(Number.isFinite(20)); // THE BEST WAY TO CHECK FOR NOT A NUMBER!!!
+
+console.log(Number.isInteger(25));
