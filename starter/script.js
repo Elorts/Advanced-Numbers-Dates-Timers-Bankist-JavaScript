@@ -338,7 +338,7 @@ console.log(20n > 10);
 console.log(10n === 10); // false...
 
 console.log('********************>183<***************************');
-
+/*
 const now = new Date();
 console.log(now);
 
@@ -346,4 +346,19 @@ console.log(new Date('Jan 07 2025 10:41:58'));
 console.log(new Date('December 24, 2015'));
 console.log(new Date(account1.movementsDates[0]));
 
-console.log(new Date());
+console.log(new Date(2037, 10, 19, 15, 23, 5));
+console.log(new Date(2037, 10, 32));
+
+console.log(new Date(0));
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+*/
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
+console.log(future.getFullYear());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getDay()); // Thursday
+console.log(future.getHours());
+// ....
+
+// Working with dates
