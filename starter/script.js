@@ -332,3 +332,7 @@ console.log(Number.MAX_SAFE_INTEGER);
 
 console.log(312135464413131314351321351351435n);
 console.log(BigInt(312135464413131314351321351351435));
+
+console.log(10n / 3n); // cuts off cecimal
+console.log(20n > 10);
+console.log(10n === 10); // false...
