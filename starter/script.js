@@ -81,6 +81,24 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // Functions
 
+const formatMovementDate = function (date) {
+  const calcDaysPassed = (date1, date2) =>
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
+
+  const daysPassed = calcDaysPassed(new Date(), date);
+  console.log(daysPassed);
+
+  if (daysPassed === 0) return 'Today';
+  if (daysPassed === 1) return 'Yesterday';
+  if (daysPassed <= 7) return `${daysPassed} days ago`;
+  else {
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
 
@@ -90,11 +108,9 @@ const displayMovements = function (acc, sort = false) {
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
+
     const date = new Date(acc.movementsDates[i]);
-    const day = `${date.getDate()}`.padStart(2, 0);
-    const month = `${date.getMonth() + 1}`.padStart(2, 0);
-    const year = date.getFullYear();
-    const displayDate = `${day}/${month}/${year}`;
+    const displayDate = formatMovementDate(date);
 
     const html = `
       <div class="movements__row">
@@ -334,7 +350,7 @@ console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 
 console.log('********************>181<***************************');
-
+/*
 console.log(5 % 2); // reminder - 2 * 2 + --->1<--- reminder
 console.log(5 / 2);
 
@@ -346,18 +362,18 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'lightblue';
   });
 });
-
+*/
 console.log('********************>182<***************************');
-
+/*
 const diameter = 287_456_000_001;
 console.log(diameter);
 
 const price = 355_99;
 const transferFee = 15_00;
 console.log(price, transferFee);
-
+*/
 console.log('********************>183<***************************');
-
+/*
 console.log(2 ** 53 - 1);
 console.log(Number.MAX_SAFE_INTEGER);
 
@@ -367,7 +383,7 @@ console.log(BigInt(312135464413131314351321351351435));
 console.log(10n / 3n); // cuts off cecimal
 console.log(20n > 10);
 console.log(10n === 10); // false...
-
+*/
 console.log('********************>183<***************************');
 /*
 const now = new Date();
@@ -383,6 +399,7 @@ console.log(new Date(2037, 10, 32));
 console.log(new Date(0));
 console.log(new Date(3 * 24 * 60 * 60 * 1000));
 */
+/*
 const future = new Date(2037, 10, 19, 15, 23);
 console.log(future);
 console.log(future.getFullYear());
@@ -393,3 +410,15 @@ console.log(future.getHours());
 // ....
 
 // Working with dates
+*/
+console.log('********************>187<***************************');
+
+const future = new Date(2037, 10, 19, 15, 23);
+console.log(typeof +future);
+console.log(Number(future));
+
+const calcDaysPassed = (date1, date2) =>
+  Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+
+const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
+console.log(days1);
