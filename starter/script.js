@@ -278,4 +278,16 @@ console.log(Math.max(5, 18, '33233', 11, 2)); // even strings...
 
 console.log(Math.min(5, 18, 33233, 11, 2));
 
-console.log(Math.PI * NumberparseFloat('10px') ** 2);
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+
+console.log(Math.trunc(Math.random() * 6) + 1);
+
+//random number generator
+
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+console.log('rndInt: ', randomInt(10, 20));
+console.log('rndInt: ', randomInt(0, 3));
+
+console.log('random: ', Math.random());
