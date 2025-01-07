@@ -324,3 +324,11 @@ console.log(diameter);
 const price = 355_99;
 const transferFee = 15_00;
 console.log(price, transferFee);
+
+console.log('********************>183<***************************');
+
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+
+console.log(312135464413131314351321351351435n);
+console.log(BigInt(312135464413131314351321351351435));
