@@ -317,3 +317,10 @@ labelBalance.addEventListener('click', function () {
 });
 
 console.log('********************>182<***************************');
+
+const diameter = 287_456_000_001;
+console.log(diameter);
+
+const price = 355_99;
+const transferFee = 15_00;
+console.log(price, transferFee);
