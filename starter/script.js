@@ -301,3 +301,17 @@ console.log(Math.floor(23.3));
 
 console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
+
+console.log('********************>181<***************************');
+
+console.log(5 % 2); // reminder - 2 * 2 + --->1<--- reminder
+console.log(5 / 2);
+
+console.log(8 % 3); // 3 + 3 + 2 ==> 2
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+    if (i % 3 === 0) row.style.backgroundColor = 'lightblue';
+  });
+});
