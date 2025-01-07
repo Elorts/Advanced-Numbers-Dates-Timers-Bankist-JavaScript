@@ -336,3 +336,14 @@ console.log(BigInt(312135464413131314351321351351435));
 console.log(10n / 3n); // cuts off cecimal
 console.log(20n > 10);
 console.log(10n === 10); // false...
+
+console.log('********************>183<***************************');
+
+const now = new Date();
+console.log(now);
+
+console.log(new Date('Jan 07 2025 10:41:58'));
+console.log(new Date('December 24, 2015'));
+console.log(new Date(account1.movementsDates[0]));
+
+console.log(new Date());
