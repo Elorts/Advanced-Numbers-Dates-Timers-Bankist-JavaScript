@@ -482,5 +482,3 @@ if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 //   const now = new Date();
 //   console.log(now);
 // }, 1000);
-
-console.log('********************>191<***************************');
