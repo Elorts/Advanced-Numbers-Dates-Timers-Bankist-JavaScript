@@ -441,3 +441,30 @@ const calcDaysPassed = (date1, date2) =>
 const days1 = calcDaysPassed(new Date(2037, 3, 4), new Date(2037, 3, 14));
 console.log(days1);
 */
+
+console.log('********************>189<***************************');
+
+const num = 3884764.23;
+
+const options2 = {
+  style: 'currency',
+  unit: 'celsius',
+  currency: 'EUR',
+  // useGrouping: false,
+};
+
+console.log('US: ', new Intl.NumberFormat('en-US', options2).format(num));
+
+console.log('Germany: ', new Intl.NumberFormat('de-DE', options2).format(num));
+
+console.log('Syria: ', new Intl.NumberFormat('ar-SY', options2).format(num));
+
+console.log(
+  navigator.language,
+  new Intl.NumberFormat(navigator.language).format(num)
+);
+
+console.log('********************>190<***************************');
+
+setTimeout(() => console.log('Here is your pizza'), 3000);
+console.log('Waiting....');
